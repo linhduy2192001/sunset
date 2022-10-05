@@ -1,0 +1,39 @@
+.slider{
+    &__title{
+        .heading{
+            font-size: 40px;
+        }
+    }
+}
+
+.gift{
+    .textbox{
+        .heading{
+            font-size: 24px;
+        }
+        &:last-child{
+            >.para:last-child{
+                margin-top: 24px;
+            }
+        }
+    }
+    @include sm{
+        padding: var(--pd-section) 0px;
+        .share{
+            padding-top: var(--pd-section);
+        }
+    }
+    @include xs{
+        padding: var(--pd-section) 0px;
+        .share{
+            padding-top: var(--pd-section);
+        }
+    }
+    @include xxs{
+        &__service{
+            &-card{
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

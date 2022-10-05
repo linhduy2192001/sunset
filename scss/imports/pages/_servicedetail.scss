@@ -1,0 +1,150 @@
+.slider{
+    &__title{
+        .by{
+            display: flex;
+            align-items: center;
+            margin-top: 16px;
+            .square{
+                width: 8px;
+                height: 8px;
+                 background: $white-cl;
+                margin: 0 8px;
+            }
+        }
+    }
+}
+.gift{
+    padding: 120px 0px;
+    background: $green-cl;
+    .container{
+        max-width: 800px;
+        .textbox{
+            .heading{
+                margin-bottom: 24px;
+            }
+        }
+    }
+    &__img{
+        margin-top: 48px;
+        margin-bottom: 84px;
+        overflow: hidden;
+        img{
+            max-width: 100%;
+            width: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__form{
+        margin-top: 135px;
+        .form{
+            padding: 66px 134px;
+            width: 550px;
+            
+        }
+    }
+   
+    &__recently{
+        display: flex;
+        justify-content: space-between;
+        padding-top: 86px;
+        .card{
+             .textbox{
+                padding-left: 18px;
+                .heading{
+                    margin-bottom: initial;
+                }
+                &:nth-child(2){
+                 padding-right: 18px;
+                }
+             }
+        }
+       
+    }
+    &__service{
+        padding-top: 80px;
+        .heading{
+            font-size:24px;
+        }
+        &-card{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 24px;
+
+            .item{
+                background: none;
+                .img{
+                    height: 384px;
+                    overflow: hidden;
+                    img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+                .heading{
+                    text-align: center;
+                }
+            }
+        }
+    }
+    @include xs{
+        padding: 50px 0px;
+        &__form{
+            margin-top: 90px;
+            
+            .form{
+                padding: 66px 90px;
+                width: 550px;
+            }
+        }
+    }
+    @include sm{
+        &__form{
+            margin-top: 135px;
+            .form{
+                padding: 66px 120px;
+                width: 550px;
+    
+            }
+        }
+    }
+    @include maxW(706px){
+        &__form{
+            margin-top: 135px;
+            .partern{
+                padding-right: initial;
+            }
+            .form{
+                padding: 66px 90px;
+                width: 550px;
+    
+            }
+        }
+    }
+    @include xxs{
+        &__form{
+            margin-top: 135px;
+            .partern{
+                padding-right: initial;
+            }
+            .form{
+                padding: 50px 60px;
+                width: 550px;
+            }
+        }
+    }
+    @include maxW(512px){
+        &__form{
+            margin-top: 135px;
+            .partern{
+                display: none;
+                padding-right: initial;
+            }
+            .form{
+                padding: 50px 60px;
+                width: 550px;
+            }
+        }
+    }
+}

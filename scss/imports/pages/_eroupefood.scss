@@ -1,0 +1,87 @@
+.menufood{
+    padding:120px 24px;
+     background:$green-cl;
+    &__wrap{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        gap: 52px;
+        .box{
+            position: relative;
+            &__img{
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    max-width: 100%;
+                    object-fit: cover;
+                    @include transition($t);
+                    transform: scale(1);
+                    &:hover{
+                        cursor: pointer;
+                        transform: scale(1.2);
+                        @include transition($t);
+                    }
+                }
+            }
+            .textbox{
+                @include mid();
+                width: 100%;
+                .heading{
+                    margin-bottom: 16px;
+                    font-family: ci;
+                    font-size: 72px;
+                    line-height: 87px;
+                }
+            }
+         }
+    }
+    .btnmain{
+        margin-top: 80px;
+    }
+    @include sm{
+        &__wrap{
+            gap: var(--gap);
+            .box{
+                .textbox{
+                    .heading{
+                        font-size: var(--h3-fs);
+                    }
+                }
+            }
+        }
+    }
+    @include xs{
+        &__wrap{
+            .box{
+                .textbox{
+                    .heading{
+                        font-size: var(--h3-fs);
+                        line-height: var(--h3-ls);
+                    }
+                }
+            }
+        }
+    }
+    @include xxs{
+        padding: var(--pd-section) 24px;
+        &__wrap{
+            gap: 15px;
+            .box{
+                .textbox{
+                    .heading{
+                        font-size: var(--h3-fs);
+                        line-height: var(--h3-ls);
+                        margin-bottom: initial;
+                    }
+                    .heading__square{
+                    }
+                }
+            }
+        }
+        .btnmain{
+            margin-top: 30px;
+        }
+    }
+   
+}

@@ -1,0 +1,122 @@
+.contact{
+    .contactus{
+        background: $green-cl;
+        >.container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            column-gap: 60px;
+        }
+        .reserveform{
+            .partern{
+                background: $black-cl;
+            }
+            .form{
+                padding: 66px 32px;
+            }
+        }
+        &__title{
+            .textbox{
+                padding-bottom: 16px;
+                .para{
+                    max-width: 490px;
+                }
+                .heading__square{
+                    margin-top: 16px;
+                    margin-bottom: 16px;
+                    justify-content: initial;
+                }
+            }
+            &-info{
+                .contactus-option{
+                    display: flex;
+                    align-items: center;
+                    i{
+                        text-align: center;
+                    }
+                    .dsc{
+                        margin-left: 42px;
+                        .title{
+                            font-family: ol;
+                            line-height: 40px;
+                            font-size: 24px;
+                        }
+                        .para{
+                            font-family: mr;
+                            line-height: 30px;
+                            font-size: 16px;
+                        }
+                    }
+                    &:not(:last-child){
+                        margin-bottom: 8px;
+                    }
+                }
+            }
+            &-social{
+                margin-top: 16px;
+                display: flex;
+                a{
+                    margin-right: 16px;
+                }
+            }
+        }
+        @include md{
+            padding: var(--pd-section) 0px;
+            .reserveform{
+                .partern{
+                    background: $black-cl;
+                    padding-right: initial;
+                }
+                .form{
+                    padding: 66px 32px;
+                }
+            }
+        }
+        @include sm{
+            padding: var(--pd-section) 0px;
+            .reserveform{
+                .partern{
+                   display: none;
+                }
+                .form{
+                    padding: 66px 32px;
+                }
+            }
+        }
+        @include xs{
+            padding: var(--pd-section) 0px;
+            .container{
+                display: grid;
+                grid-template-columns: 1fr;
+                row-gap: 60px;
+            }
+            &__title{
+                .textbox{
+                    padding-bottom: 16px;
+                    .para{
+                        max-width: 100%;
+                    }
+                    .heading__square{
+                        margin-top: 16px;
+                        margin-bottom: 16px;
+                        justify-content: initial;
+                    }
+                }
+                &-social{
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    .map{
+        background: $green-cl;
+        &__destination{
+            padding: 0px 15px;
+            max-width: 1380px;
+            margin: 0 auto;
+            // @include mid($flex:true);
+            iframe{
+                width: 100%;
+            }
+        }
+    }
+}

@@ -1,0 +1,178 @@
+// css footer
+.footer{
+    &__top{
+        background: $black-cl;
+        padding: 102px 0px;
+       .container{
+            display: flex;
+            justify-content: space-between;
+            .contact{
+                .heading{
+                    @include text(24px,ol,54px,$white-cl,capitalize);
+                    padding-bottom: 24px;
+                }
+                &-option{
+                    display: flex;
+                    margin-bottom: 16px;
+                    i{
+                        width: 40px;
+                        height: 40px;
+                    }
+                    p{
+                        @include text(16px,mr,30px,$white-cl,none);
+                    }
+                    
+                }
+            }
+            .mid{
+                text-align: center;
+                .logo{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .brand{
+                    }
+                    .icon{
+                        width: 43px;
+                        margin-right: 10px;
+                    }
+                }
+                .content{
+                    max-width: 400px;
+                    @include text(24px,ci,40px,$white-cl,none);
+                    margin-top: 32px;
+                    margin-bottom: 32px;
+                }
+                .social{
+                   a:not(:last-child){
+                    margin-right: 24px;
+                   }
+                }
+            }
+            .time{
+                text-align: right;
+                .heading{
+                    @include text(24px,ol,54px,$white-cl,capitalize);
+                    padding-bottom: 24px;
+                }
+                p{
+                    @include text(16px,mr,40px,$white-cl,none);
+                }
+                span{
+                    @include text(16px,mr,40px,$yellow-cl,capitalize);
+                }
+            }
+       }
+    }
+    &__bottom{
+        padding: 25px 0px;
+        background: $green-cl;
+        p{
+            display: flex;
+            justify-content: center;
+            @include text(16px,mr,40px,$white-cl,none);
+        }
+    }
+    @include sm{
+        &__top{
+            padding: 50px 0px;
+            .container{
+                .contact{
+                    .heading{
+                        @include text(20px,ol,54px,$white-cl,capitalize);
+                        padding-bottom: 20px;
+                    }
+                    &-option{
+                        display: flex;
+                        margin-bottom: 16px;
+                        i{
+                            width: 40px;
+                            height: 40px;
+                        }
+                        p{
+                            @include text(13px,mr,30px,$white-cl,none);
+                        }
+                        
+                    }
+                }
+                .mid{
+                    text-align: center;
+                    .logo{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .brand{
+                        }
+                        .icon{
+                            width: 43px;
+                            margin-right: 10px;
+                        }
+                    }
+                    .content{
+                        max-width: 300px;
+                        @include text(20px,ci,40px,$white-cl,none);
+                        margin-top: 32px;
+                        margin-bottom: 32px;
+                    }
+                    .social{
+                       a:not(:last-child){
+                        margin-right: 24px;
+                       }
+                    }
+                }
+                .time{
+                    text-align: right;
+                    .heading{
+                        @include text(20px,ol,54px,$white-cl,capitalize);
+                        padding-bottom: 20px;
+                    }
+                    p{
+                        @include text(13px,mr,40px,$white-cl,none);
+                    }
+                    span{
+                        @include text(13px,mr,40px,$yellow-cl,capitalize);
+                    }
+                }
+           }
+        }
+        &__bottom{
+            --pdFooter:20px;
+            padding: var(--pdFooter) 0px;
+        }
+    }
+    @include xs{
+        &__top{
+            .container{ 
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                .contact{
+                    text-align: center;
+                    .heading{
+                        padding-bottom: 5px;
+                    }
+                }
+                .mid{
+                    .content{
+                        max-width: 100%;
+                    }
+                }
+                .time{
+                    order: -1;
+                    text-align: center;
+                    .heading{
+                        padding-bottom: 5px;
+                    }
+                }
+               
+            }
+        }
+        &__bottom{
+            --pdFooter:20px;
+            padding: var(--pdFooter) 0px;
+            p{
+                font-size: 10px;
+            }
+        }
+    }
+}

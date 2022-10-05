@@ -1,0 +1,25 @@
+.event{
+    .tips{
+        padding: 120px 0px ;
+        background: $green-cl;
+        &__card{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap: 24px;
+            row-gap: 24px;
+        }
+        .btnmain{
+            margin-top: 64px;
+        }
+        @include xs{
+            &__card{
+                grid-template-columns: repeat(2,1fr);
+            }
+        }
+        @include xxs{
+            &__card{
+                grid-template-columns: 1fr;
+            }
+        }
+    }
+}

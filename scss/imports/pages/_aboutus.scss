@@ -1,0 +1,247 @@
+.aboutus{
+    .slider{
+        &__title{
+            .heading{
+                &::before{
+                    display: none;
+                }
+            }
+        }
+    }
+    
+    .restaurant{
+        padding: 100px 0px;
+        background: $green-cl;
+    
+        .restaurant-top{
+            display: flex;
+            position: relative;
+        }
+        &__img{
+            padding-right: 43px;
+            overflow: hidden;
+            img{
+                max-width: 100%;
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        &__title{
+            max-width: 528px;
+            .textbox{
+                margin-bottom: 40px;
+            }
+            .heading{
+                margin-top: 0px;
+                margin-bottom: 34px;
+                font-size: 72px;
+                line-height: 98px;
+            }
+            &-info{
+                display: flex;
+                .awards{
+                    padding-right: 53px;
+                    a{
+                        @include text(16px,mr,30px,$white-cl,underline);
+                    }
+                }
+                .heading{
+                    font-size: 40px;
+                    margin-bottom:14px;
+                    line-height: 54px;
+                    font-family: or;
+                }
+                p{
+                    @include text(16px,mr,30px,$white-cl,none);
+                }
+                span{
+                    @include text(16px,mb,40px,$white-cl,capitalize);
+                }
+                .social{
+                    padding-top: 45px;
+                    a{
+                        
+                        &:not(:last-child){
+                            margin-right: 24px;
+                        }
+                        svg{
+                            vertical-align: middle;
+                        }
+                    }
+                }
+            }
+        }
+        .restaurant-middle{
+            padding-top: 166px;
+            padding-bottom: 176px;
+            overflow: hidden;
+            img{
+                min-width: 100%;
+                min-height: 100%;
+                object-fit: cover;
+            }
+        }
+        .map__destination{
+            max-width: 1200px;
+            padding: 160px 0px;
+        }
+        .restaurant-bottom{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap: 24px;
+        }
+        &__card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .icon{
+                display: flex;
+                justify-content: center;
+                width: 124px;
+                height: 124px;
+                margin-right: 57px;
+            }
+           
+            .textbox{
+                .heading{
+                    font-size: 24px;
+                }
+                .para{
+                    height: 120px;
+                    @include overtext(4);
+                }
+            }
+        }
+        @include sm{
+            &-top{
+                .restaurant__img{
+                    height: 400px;
+                }
+            }
+            &__title{
+                max-width: 400px;
+                .textbox{
+                    margin-bottom: 40px;
+                    .para{
+                        font-size: 13px;
+                    }
+                }
+                .heading{
+                    margin-top: 0px;
+                    margin-bottom: 34px;
+                    font-size: 50px;
+                    line-height: 98px;
+    
+                }
+                &-info{
+                    display: flex;
+                    .awards{
+                        padding-right: 40px;
+                        a{
+                            @include text(13px,mr,30px,$white-cl,underline);
+                        }
+                    }
+                    .heading{
+                        font-size: 20px;
+                        margin-bottom:14px;
+                        line-height: 54px;
+                        font-family: or;
+                    }
+                    p{
+                        @include text(13px,mr,30px,$white-cl,none);
+                    }
+                    span{
+                        @include text(13px,mb,40px,$white-cl,capitalize);
+                    }
+                    .social{
+                        padding-top: 20px;
+                        a{
+                            &:not(:last-child){
+                                margin-right: 24px;
+                            }
+                            svg{
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+            .restaurant-middle{
+                padding-top: 100px;
+                padding-bottom: 100px;
+            }
+            .restaurant-bottom{
+                display: grid;
+                grid-template-columns: repeat(2,1fr);
+                column-gap: 24px;
+            }
+            &__card{
+                .icon{
+                    margin-right: 12px;
+                    svg{
+                        width: 40px;
+    
+                    }
+                }
+                .textbox{
+                    .heading{
+                        font-size: 24px;
+                    }
+                }
+            }
+        }
+        @include xs{
+            padding: 50px 0px;
+            .restaurant-top{
+                flex-direction: column;
+                .restaurant__img{
+                    padding-right: initial;
+                }
+                .restaurant__title{
+                   max-width: 100%;
+                   &-info{
+                    justify-content: space-around;
+                   }
+                }
+            }
+            .restaurant-middle{
+                padding: 50px 0px;
+            }
+            .restaurant-bottom{
+                display: grid;
+                grid-template-columns:1fr;
+                column-gap: 24px;
+            
+            }
+            &__title{
+                &-info{
+                    .social{
+                        padding-top: 10px;
+                        a{
+                            &:not(:last-child){
+                                margin-right: 12px;
+                            }
+                            svg{
+                                width: 16px;
+                                vertical-align: middle;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+       
+        @include xxs{
+    
+        }
+        @include maxW(660px){
+            &-top{
+                svg{
+                    display: none;
+                }
+            }
+        }
+    }
+    
+}
